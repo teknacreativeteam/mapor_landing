@@ -1,0 +1,158 @@
+@import "colors";
+@import "typography";
+@import "spacing";
+
+@mixin cards-effect {
+  background-size: cover;
+  background-blend-mode: multiply, normal;
+}
+
+.evaristo {
+  background: -webkit-gradient(linear, left bottom, left top, from(#{$c-primary}), to(#{$c-primary})), url("img/works/evaristo.png");
+  background: -o-linear-gradient(bottom, #{$c-primary}, #{$c-primary}), url("img/works/evaristo.png");
+  background: linear-gradient(0deg, #{$c-primary}, #{$c-primary}), url("img/works/evaristo.png");
+  @include cards-effect;
+}
+
+.hopefoundation {
+  background: linear-gradient(0deg, #{$c-primary}, #{$c-primary}), url("img/works/hope-foundation.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(#{$c-primary}), to(#{$c-primary})), url("img/works/hope-foundation.png");
+  background: -o-linear-gradient(bottom, #{$c-primary}, #{$c-primary}), url("img/works/hope-foundation.png");
+  background: linear-gradient(0deg, #{$c-primary}, #{$c-primary}), url("img/works/hope-foundation.png");
+  @include cards-effect;
+}
+
+.booklet {
+  background: -webkit-gradient(linear, left bottom, left top, from(#{$c-primary}), to(#{$c-primary})), url("img/works/booklet.png");
+  background: -o-linear-gradient(bottom, #{$c-primary}, #{$c-primary}), url("img/works/booklet.png");
+  background: linear-gradient(0deg, #{$c-primary}, #{$c-primary}), url("img/works/booklet.png");
+  @include cards-effect;
+}
+
+.stricta {
+  background: -webkit-gradient(linear, left bottom, left top, from(#{$c-primary}), to(#{$c-primary})), url("img/works/stricta.png");
+  background: -o-linear-gradient(bottom, #{$c-primary}, #{$c-primary}), url("img/works/stricta.png");
+  background: linear-gradient(0deg, #{$c-primary}, #{$c-primary}), url("img/works/stricta.png");
+  @include cards-effect;
+}
+
+.clickhouse {
+  background: -webkit-gradient(linear, left bottom, left top, from(#{$c-primary}), to(#{$c-primary})), url("img/works/clickhouse.png");
+  background: -o-linear-gradient(bottom, #{$c-primary}, #{$c-primary}), url("img/works/clickhouse.png");
+  background: linear-gradient(0deg, #{$c-primary}, #{$c-primary}), url("img/works/clickhouse.png");
+  @include cards-effect;
+}
+
+.bewatt {
+  background: -webkit-gradient(linear, left bottom, left top, from(#{$c-primary}), to(#{$c-primary})), url("img/works/bewatt.png");
+  background: -o-linear-gradient(bottom, #{$c-primary}, #{$c-primary}), url("img/works/bewatt.png");
+  background: linear-gradient(0deg, #{$c-primary}, #{$c-primary}), url("img/works/bewatt.png");
+  @include cards-effect;
+}
+
+.cards {
+  border-radius: $space-ss;
+  color: $c-secondary;
+
+  a:link {
+    color: $c-secondary;
+  }
+
+  a:visited {
+    color: $c-neutral2;
+  }
+
+  a:hover {
+    color: $c-pure;
+  }
+
+  a:active {
+    color: $c-primary;
+  }
+}
+
+.standart-cards-parent {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  max-width: 376px;
+}
+
+.standart-cards {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  position: absolute;
+  padding: $space-m $space-s;
+
+  &:hover {
+    border-radius: $space-ss;
+    background: rgba(5, 72, 168, 0.3);
+  }
+
+  p:first-child {
+    @include bodyCaps;
+    display: inline-block;
+    padding-bottom: $space-ss;
+  }
+
+  span {
+    right: 16px;
+    top: 24px;
+    position: absolute;
+  }
+
+  h4 {
+    @include display5-link;
+    padding-bottom: $space-xxs;
+    text-transform: capitalize;
+  }
+}
+
+.big-cards-parent {
+  position: relative;
+  width: 100%;
+  height: 424px;
+}
+
+.big-cards {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  position: absolute;
+  padding: $space-xl $space-s;
+
+  &:hover {
+    border-radius: $space-ss;
+    background: rgba(5, 72, 168, 0.3);
+  }
+
+  p:first-child {
+    @include display5-link;
+    padding-bottom: $space-s;
+    text-transform: capitalize;
+  }
+
+  h3 {
+    @include display3-link;
+    padding-bottom: $space-ss;
+  }
+
+  p:last-of-type {
+    max-width: 324px;
+    padding-bottom: $space-l;
+  }
+
+  h5 {
+    @include bodyCaps;
+  }
+
+  @media screen and (min-width: 800px) {
+    padding: $space-xl $space-ml;
+  }
+
+}

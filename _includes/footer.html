@@ -1,0 +1,10 @@
+<footer>
+  <nav>
+    <ul>
+      {% for navlinks in site.data.samplelist.docs %}
+      <li><a href="{{ navlinks.url }}">{{ navlinks.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+  <p>©2020 by Fernando Caldeira</p>
+</footer>
