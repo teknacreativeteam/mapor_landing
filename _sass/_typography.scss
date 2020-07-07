@@ -1,12 +1,8 @@
 @import "colors";
 
-@font-face {
-  font-family: "Gilroy-Bold";
-  src: url("fonts/Gilroy/Gilroy-Bold/Gilroy-Bold.woff");
-}
-
 @mixin bodyFonts {
-  font-family: "Karla", Helvetica, Arial, sans-serif;
+  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+
 }
 
 @mixin standartBody {
@@ -21,20 +17,13 @@
   line-height: 28px;
 }
 
-@mixin desktopBody {
+@mixin mobileBodyWhite {
   @include bodyFonts;
-  font-size: 16px;
-  line-height: 24px;
-}
-
-@mixin bodyCaps {
-  @include desktopBody;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-size: 18px;
+  line-height: 28px;
 }
 
 @mixin displayFonts {
-  font-family: "Gilroy-Bold", Helvetica, Arial, sans-serif;
   color: $c-primary;
 }
 
@@ -52,36 +41,17 @@
 
 @mixin display3 {
   @include displayFonts;
-  font-size: 39.06px;
-  line-height: 50.8px;
-}
-
-@mixin display3-link {
-  font-family: "Gilroy-Bold", Helvetica, Arial, sans-serif;
-  font-size: 39.06px;
-  line-height: 50.8px;
+  font-size: 40px;
+  line-height: 50px;
 }
 
 @mixin display4 {
   @include displayFonts;
-  font-size: 31.25px;
+  font-size: 32px;
   line-height: 40px;
 }
 
-@mixin display5 {
-  @include displayFonts;
-  font-size: 25px;
-  line-height: 30px;
-}
-
-@mixin display5-link {
-  font-family: "Gilroy-Bold", Helvetica, Arial, sans-serif;
-  font-size: 25px;
-  line-height: 30px;
-}
-
-@mixin display6 {
-  @include displayFonts;
-  font-size: 20px;
-  line-height: 26px;
+@mixin display3-link {
+  font-size: 39.06px;
+  line-height: 50.8px;
 }
