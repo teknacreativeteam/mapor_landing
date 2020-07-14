@@ -61,7 +61,7 @@ layout: default
     </figcaption>
   </figure>
 </div>
-
+<!--
     <div class="accordion">
       <ul>
         <li>
@@ -72,12 +72,16 @@ layout: default
           <img src="assets/img/accord.png">
           <h3>Text</h3>
         </li>
-        <li>
-          <img src="assets/img/accord.png">
-          <h3>Text</h3>
-        </li>
       </ul>
     </div>
+-->
+    <!--list of banners to be stacked -->
+    <div class="fsbanner" id="demo-3">
+      <div style="background-image:url(assets/img/accord.png)"><span class="name">Image 1 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aliquam libero voluptas.</p></span>
+      </div>
+      <div style="background-image:url(assets/img/accord.png)"><span class="name">Image 2</span></div>
+    </div>
+
   
 </section>
 
@@ -146,4 +150,14 @@ layout: default
     <img src="assets/img/3v3.png" alt="">  
   </div>
 </section>
+
+<!---->
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> 
+<script src="fsbanner.js"></script> 
+<script>
+$('#demo-1').fsBanner();
+$('#demo-2').fsBanner();
+$('#demo-3').fsBanner({'trigger':'mouse'});
+</script>
+
 

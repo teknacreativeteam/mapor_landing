@@ -2,7 +2,7 @@
 @import "typography";
 @import "spacing";
 @import "buttons";
-
+@import "accordion";
 /* Css Reset */
 *,
 *::before,
@@ -218,9 +218,6 @@ section {
   figure {
     position: relative;
     max-width: 260px;
-    img {
-     
-    }
 
     figcaption {
       div {
@@ -245,19 +242,21 @@ section {
     ul {
       cursor: pointer;
       list-style: none;
+
       &:hover {
         //menos o valor valor do hover da li
-        width: calc((100% - 300px) / 2) //acho que posso tirar o dividir por 2
+        width: calc((100% - 800px) / 2) //acho que posso tirar o dividir por 2
       }
 
       li {
         position: relative;
-        width: calc(100% / 3);
+        width: calc(100% / 2);
         float: left;
         transition: all 0.5s;
+        object-fit: cover;
 
         &:hover {
-          width: 300px;
+          width: 800px;
         }
 
         h3 {
