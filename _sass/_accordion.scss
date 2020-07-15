@@ -1,20 +1,19 @@
-@import "colors";
-@import "typography";
-@import "spacing";
-@import "buttons";
-
 .fsbanner, .fsbanner > div > span { 
 	/* obrigatório */
 	display:none; 
 }
-div.fsbanner {
+div.fsbanner { 
 	/* obrigatorio */ 
 	position:relative;
 	overflow:hidden;
 	/* opcional */
-	height:500px;
+	height:300px;
 	color:white;
-	font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+	font-size:20px;
+	font-family:Verdana;
+	font-weight:bold;
+	border-radius:5px;
+   -webkit-text-stroke: 1px black;
 }
 
 
@@ -23,53 +22,19 @@ div.fsbanner {
 	background-size:cover;
 	cursor:pointer;
 	top:0px; 
-	left:0px;
-	
-	
-	&:hover {
-		&::after {
-			content: "";
-			background: $c-secondary;
-			width: 100%;
-			height: 50%;
-			position: absolute;
-			left: 0;
-			opacity: 0.7;
-			bottom: 0;
-		}
-	}
-	
+	left:0px; 
 }
-
 .fsbanner > div .name { 
-	display:none;
+	display:block;
 	position:absolute; 
 	left:10px; 
-    bottom:10px;
-    max-width: 200px;
-    @include display4;
-    color: $c-pure;
-	font-weight: 700;
-	z-index: 3;
-
-    p {
-        @include mobileBody;
-        font-weight: 100;
-    }
-    
-    &:hover{
-        display: block;
-    }
+	bottom:10px;
 }
-
 .fsbanner > div .name.minimized {
-	opacity: 0;
+	/* css3 */
 	transform: rotate(-90deg);
 	transform-origin: left top 0;
-	
+	/* pode ser necessário ajustar isso dependendo da fonte escolhida */
 	bottom: -13px;
     left: 7px;
 }
-
-//aqui é onde se esconde a secção
-
