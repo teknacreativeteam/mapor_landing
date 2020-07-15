@@ -5,10 +5,26 @@ layout: default
 <section class="intro-section">
   
   <header>
+    <nav>
     <div>
       <img src="assets/img/logo.png" alt="">
     </div>
-    <nav>Contactos</nav>
+    
+      <ul>
+        <li>
+          Contactos
+        </li>
+        <li>
+          <a href="">
+            <i>O</i>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i>O</i>
+          </a>
+        </li>
+      </nav>
   </header>
 
   <div class="intro-text">
@@ -16,16 +32,30 @@ layout: default
     <p>Distribuidores exclusivos de marcas conceituadas na área da construção e indústria.</p>
   </div>
 
+
+  <div class="red-paint-mobile">
+  </div>
+  <div class="img-container-mobile">
+    <i></i>
+  </div>
+
   <div class="red-paint">
   </div>
   <div class="img-container">
     <i></i>
   </div>
+
+
   <div class="zone">
     <img src="assets/img/30.png" alt="">
     <div class="trinta-desc">
-      <h2 class="title1">A experiência faz parte de nós</h2>
-      <p>Sediada em Mira, a Mapor conta já com uma vasta experiência no sector da construção e da indústria. Produzimos e distribuímos os melhores e mais variados materiais para estes sectores e representamos marcas confiáveis que nos permitem dar uma resposta de grande qualidade e diversidade ao mercado.​</p>
+      <h2 class="title1">A experiência
+        faz parte
+        de nós</h2>
+      <p>Sediada em Mira, a Mapor conta já com uma vasta experiência no sector da construção 
+        e da indústria. Produzimos e distribuímos os melhores e mais variados 
+        materiais para estes sectores e representamos marcas confiáveis que nos 
+        permitem dar uma resposta de grande qualidade e diversidade ao mercado.​​</p>
     </div>
   </div>
 </section>
@@ -36,28 +66,26 @@ layout: default
   
   <div class="wrap-figures">
   <figure>
-    <img src="assets/img/imagebuild.png" alt="">
+    <img src="assets/img/accord.png" alt="">
     <figcaption>
-      <div>
         <h4>Construção Civil</h4>
         <p>Revestimento e pintura
           Restauro e reabilitação
           Construção eficiente - IAC
           Construção LSF - IAC</p>
-      </div>
     </figcaption>
   </figure>
 
   <figure>
-    <img src="assets/img/imagebuild.png" alt="">
+    <img src="assets/img/accord.png" alt="">
     <figcaption>
-      <div>
-        <h4>Construção Civil</h4>
-        <p>Revestimento e pintura
-          Restauro e reabilitação
-          Construção eficiente - IAC
-          Construção LSF - IAC</p>
-      </div>
+        <h4>Indústria</h4>
+        <p>Marcenaria e mobiliário
+          Metalomecânica
+          Mobiliário Urbano
+          Pavimentos
+          Cerâmica
+          Tintas</p>
     </figcaption>
   </figure>
 </div>
@@ -76,11 +104,26 @@ layout: default
     </div>
 -->
     <!--list of banners to be stacked -->
+    <div class="accordion">
     <div class="fsbanner" id="demo-3">
-      <div style="background-image:url(assets/img/accord.png)"><span class="name">Image 1 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aliquam libero voluptas.</p></span>
+      <div style="background-image:url(assets/img/accord.png)">
+        <span class="name">Construção Civil
+        <p>Revestimento e pintura
+        Restauro e reabilitação
+        Construção eficiente - IAC
+        Construção LSF - IAC</p></span>
       </div>
-      <div style="background-image:url(assets/img/accord.png)"><span class="name">Image 2</span></div>
+      <div style="background-image:url(assets/img/accord.png)"><span class="name">Indústria
+        <p>Marcenaria e mobiliário
+        Metalomecânica
+        Mobiliário Urbano
+        Pavimentos
+        Cerâmica
+        Tintas</p>
+      </span></div>
     </div>
+  </div>
+  
 
   
 </section>
@@ -104,6 +147,7 @@ layout: default
       <li class="tres servicos"></li>
     </ul>
   </div>
+  <div class="bg-red"></div>
   <div class="list-bg-red">
     <ul>
       <li class="quatro servicos"></li>
@@ -159,5 +203,6 @@ $('#demo-1').fsBanner();
 $('#demo-2').fsBanner();
 $('#demo-3').fsBanner({'trigger':'mouse'});
 </script>
+
 
 

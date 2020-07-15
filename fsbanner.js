@@ -2,7 +2,7 @@ var fsBanner = function(container,options) {
 	var self = this;
 
 	var defaults = {
-		'showName':false,	
+		'showName':true,	
 		'toUpdate':{},
 		'whenEmpty':{},
 		'trigger':'click',

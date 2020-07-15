@@ -95,34 +95,82 @@ section {
   position: relative;
   padding-top: $space-m;
 
-  .red-paint {
+  .red-paint-mobile {
     position: absolute;
     top: 0;
     right: 32px;
-    width: 122px;
+    width: 144px;
     height: 300px;
     background-color: $c-secondary;
     z-index: 0;
+
+    @media screen and (min-width:800px){
+      display: none;
+    }
+
+    }
+    
+    .img-container-mobile {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    z-index: 0;
+    top: 340px;
+    right: 0;
+    background: blue;
+
+    @media screen and (min-width:800px){
+      display: none;
+    }
+    }
+
+  .red-paint {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 124px;
+    width: 200px;
+    height: 300px;
+    background-color: $c-secondary;
+    z-index: 0;
+
+    @media screen and (min-width:800px){
+      display: block;
+    }
   }
 
   .img-container {
+    display: none;
+    height: 200px;
+    width: 200px;
     position: absolute;
-    z-index: 2;
-    right: -44px;
-    
+    z-index: 1;
+    left: 124px;
+    background: blue;
+
+    @media screen and (min-width:800px){
+      display: block;
+    }
+
   }
 
   header {
     position: relative;
     z-index: 2;
 
-    div {
+    nav {
+      display: flex;
+    
+
+    img {
       padding-bottom: $space-xl;
       flex-grow: 3;
+      max-width: 221px;
 
       @media screen and (min-width: 800px) {
         padding-top: $space-l;
         padding-left: $space-xxl;
+        max-width: 330px;
       }
 
     }
@@ -131,18 +179,34 @@ section {
       display: flex;
     }
 
+    ul {
+      display: none;
+
+      @media screen and (min-width: 800px) {
+      display: flex;
+      width: 100%;
+      padding-top: 32px;
+      padding-right: 48px;
+      justify-content: flex-end;
+    }
+    }
+
   }
+
+  }
+  
 
   .intro-text {
     position: relative;
     z-index: 2;
-    padding-bottom: $space-xxl;
+    padding-bottom: 240px;
 
     h1 {
       padding-bottom: $space-s;
 
       @media screen and (min-width: 800px) {
         width: 470px;
+        padding-top: $space-xl;
       }
     }
 
@@ -187,6 +251,8 @@ section {
 }
 
 .gallery-section {
+  max-width: 900px;
+  margin: 0 auto;
   
   h2 {
     padding-bottom: $space-s;
@@ -208,68 +274,45 @@ section {
       margin-bottom: $space-m;
     }
 
-    @media screen and (min-width: 800px) {
-      flex-direction: row;
+    @media screen and (min-width:800px){
+      display: none;
     }
-
 
   }
 
   figure {
     position: relative;
-    max-width: 260px;
-
+    max-width: 100%;
+    //overlay
+    &::after {
+      content: "";
+      background: $c-secondary;
+      width: 100%;
+      height: 220px;
+      position: absolute;
+      left: 0;
+      opacity: 0.7;
+      bottom: 0;
+    }
+    img {
+      height: 460px;
+      width: auto;
+    }
     figcaption {
-      div {
+      width:100%;
+      height: 180px;
       position: absolute;
       bottom: 0;
-      width: 100%;
-      height: 180px;
+      z-index: 3;
       color: $c-pure;
-      z-index: 2;
-      background-color: $c-secondary-opacity;
+      padding-left: $space-s;
+      padding-right: $space-s;
+
+      h4{
+        font-size: 24px;
+        line-height: 40px;
       }
-    }
-  }
-
-  //image banner
-
-  .accordion {
-    width: 100%;
-    height: 650px;
-    margin: 50px auto;
-    overflow: hidden;
-    ul {
-      cursor: pointer;
-      list-style: none;
-
-      &:hover {
-        //menos o valor valor do hover da li
-        width: calc((100% - 800px) / 2) //acho que posso tirar o dividir por 2
-      }
-
-      li {
-        position: relative;
-        width: calc(100% / 2);
-        float: left;
-        transition: all 0.5s;
-        object-fit: cover;
-
-        &:hover {
-          width: 800px;
-        }
-
-        h3 {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          background-color: red;
-          padding: $space-s;
-          color: $c-pure;
-          width: 100%;
-        }  
-      }
-
+      
     }
   }
 
@@ -278,6 +321,11 @@ section {
 .serv-section {
   position: relative;
   height: 1380px;
+  padding: 0;
+
+  .serv-section-intro {
+    padding-left: $space-s;
+
 
   h2 {
     padding-bottom: $space-s;
@@ -287,14 +335,19 @@ section {
     padding-bottom: $space-ml;
   }
 
+  }
+
+
   .car-wrap {
 
     display: none;
 
     @media screen and (min-width: 800px) {
-    display: block;
-      height: 800px;
-    width: 300px;
+    position: relative;
+      z-index: 2;
+      display: block;
+    height: 600px;
+    width: 346px;
     background-image: url('img/car.png');
     background-size: cover;
     }
@@ -354,12 +407,33 @@ section {
     margin-bottom: $space-m;
   }
 
+  .bg-red {
+    display: none;
+
+    @media screen and (min-width: 800px){
+      display: block;
+    }
+
+    background-color: lime;
+    height: 230px;
+  }
+
+  .list-bg-grey {
+    background-color: $c-neutral2;
+    padding-left: $space-s;
+    margin: 0;
+
+    ul{
+      margin: 0;
+    }
+  }
+
   .list-bg-red {
     background-color: $c-secondary;
     position: absolute;
-    margin-left: -16px;
     padding-left: $space-s;
     width: 100%;
+    margin: 0;
   }
 
   @media screen and (min-width: 800px){
@@ -373,6 +447,10 @@ section {
       grid-area: car;
     }
 
+    .bg-red {
+      grid-area: bg-red;
+    }
+
     .list-bg-grey {
       grid-area: listg;
     }
@@ -382,19 +460,19 @@ section {
     }
     
     grid-template-columns: 1fr 2fr;
-    grid-column-gap: $space-s;
-    grid-template-rows: auto;
+    grid-template-rows: 160px 300px 300px;
     grid-template-areas:
       "intro intro"
       "car listg"
-      "car listr"
-      "car .";
+      "bg-red listr";
   }
 
 }
 
 
 .photo-section {
+  padding: $space-s;
+
   div {
     width: 100%;
     height: 100%;
@@ -462,11 +540,13 @@ footer {
   background-color: $c-primary;
   padding-left: $space-s;
   padding-right: $space-s;
+  
 
   h3 {
     @include display2;
     color: $c-pure;
     padding-bottom: $space-s;
+    padding-top: $space-l;
   }
 
   h4 {
@@ -479,26 +559,57 @@ footer {
     color: $c-third;
     padding-bottom: $space-m;
   }
+  
+  .f-title {
+    display: block;
+
+    @media screen and (min-width: 800px) {
+      display: none;
+    }
+  }
 
   .f-title-d {
     display: none;
+
+    @media screen and (min-width: 800px){
+      display: block;
+      max-width: 435px;
+    }
+  }
+
+  .f-intro {
+    max-width: 420px;
   }
 
   .the-map {
 
     iframe {
-    background-color: red;
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 340px;
+    padding-bottom: $space-m;
+
       @media screen and (min-width: 800px) {
-        width: 600px;
-        height: 400px;
+        width: 100%;
+        height: 450px;
       }
     }
   }
 
   .fut {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    
+    @media screen and (min-width:800px){
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-around;
+    }
+
+    li {
+      padding-bottom: $space-m;
+    }
   }
 
   @media screen and (min-width: 800px) {
@@ -523,10 +634,20 @@ footer {
     
     grid-template-columns: 1fr 2fr;
     grid-column-gap: $space-s;
-    grid-template-rows: auto;
+    grid-template-rows: auto 500px auto;
     grid-template-areas:
       ". intro"
       "three map"
-      "fut fut";
+      "tag tag";
+  }
+
+  .f-red-flag {
+    background-color: $c-secondary;
+    height: 700px;
+    width: 200px;
+    left: 30%;
+    transform: translate(10%, 20%);
+    z-index: 1;
+    position: absolute;
   }
 }
