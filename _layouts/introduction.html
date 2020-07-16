@@ -14,14 +14,10 @@ layout: default
           Contactos
         </li>
         <li>
-          <a href="">
-            <i>O</i>
-          </a>
+          <a href="">{% include facebook.html %}</a>
         </li>
         <li>
-          <a href="">
-            <i>O</i>
-          </a>
+            <a href="">{% include linkedin.html %}</a>
         </li>
       </nav>
   </header>
@@ -59,6 +55,8 @@ layout: default
   </div>
 </section>
 
+
+
 <section class="gallery-section">
   <h2 class="title2">Áreas de atuação</h2>
   <p class="text-notwhite">Disponibilizamos uma grande variedade de produtos dentro das seguintes áreas:</p>
@@ -88,43 +86,9 @@ layout: default
     </figcaption>
   </figure>
 </div>
-<!--
-    <div class="accordion">
-      <ul>
-        <li>
-          <img src="assets/img/accord.png">
-          <h3>Text</h3>
-        </li>
-        <li>
-          <img src="assets/img/accord.png">
-          <h3>Text</h3>
-        </li>
-      </ul>
-    </div>
--->
-    <!--list of banners to be stacked -->
-    
-    <div class="fsbanner" id="demo-3">
-      <div style="background-image:url(assets/img/accord.png)">
-        <span class="name">Construção Civil
-        <p>Revestimento e pintura
-        Restauro e reabilitação
-        Construção eficiente - IAC
-        Construção LSF - IAC</p></span>
-      </div>
-      <div style="background-image:url(assets/img/accord.png)"><span class="name">Indústria
-        <p>Marcenaria e mobiliário
-        Metalomecânica
-        Mobiliário Urbano
-        Pavimentos
-        Cerâmica
-        Tintas</p>
-      </span></div>
-    
-  </div>
-  
 
-  
+{% include accordion.html %}
+
 </section>
 
 
@@ -193,15 +157,5 @@ layout: default
     <img src="assets/img/3v3.png" alt="">  
   </div>
 </section>
-
-<!---->
-<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> 
-<script src="fsbanner.js"></script> 
-<script>
-$('#demo-1').fsBanner();
-$('#demo-2').fsBanner();
-$('#demo-3').fsBanner({'trigger':'mouse'});
-</script>
-
 
 

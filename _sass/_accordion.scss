@@ -1,81 +1,142 @@
-@import "colors";
-@import "typography";
-@import "spacing";
-@import "buttons";
-
-.fsbanner, .fsbanner > div > span { 
-	/* obrigatório */
-	display:none; 
-}
-div.fsbanner {
-	/* obrigatorio */ 
-	position:relative;
-	overflow:hidden;
-	/* opcional */
-	height:500px;
-	color:white;
+.accordion {
+	width: 100%;
+	max-width: 1080px;
+	height: 500px;
+	overflow: hidden;
+	margin: 50px auto;
+  }
+  
+  .accordion ul {
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+	margin: 0;
+	padding: 0;
+  }
+  
+  .accordion ul li {
+	display: table-cell;
+	vertical-align: bottom;
+	position: relative;
+	width: 50%;
+	height: 500px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	transition: all 500ms ease;
+  }
+  
+  .accordion ul li div {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+  }
+  
+  .accordion ul li div a {
+	display: block;
+	height: 250px;
+	width: 100%;
+	position: relative;
+	z-index: 3;
+	vertical-align: bottom;
+	padding: 15px 20px;
+	box-sizing: border-box;
+	color: #fff;
+	text-decoration: none;
+	font-family: Open Sans, sans-serif;
+	transition: all 200ms ease;
+  }
+  
+  .accordion ul li div a * {
+	opacity: 0;
+	margin: 0;
+	width: 100%;
+	position: absolute;
+	z-index: 5;
+	overflow: hidden;
+	-webkit-transform: translateX(-20px);
+	transform: translateX(-20px);
+	-webkit-transition: all 400ms ease;
+	transition: all 400ms ease;
+  }
+  
+  .accordion ul li div a h2 {
+	position: absolute;
 	font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+	font-size: 24px;
+	text-transform: uppercase;
+	margin-bottom: 2px;
+	//altura text
+	top: 80px;
+  }
+  
+  .accordion ul li div a p {
+	position: absolute;
+	font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+	width: 200px;
+	//altura text
+	top: 120px;
+	font-size: 13.5px;
+  }
+
+
+
+
+
+
+
+  .accordion ul li:nth-child(1) { background-image: url("../assets/img/accord.png"); }
+
+.accordion ul li:nth-child(2) { background-image: url("../assets/img/accord.png"); }
+
+.accordion ul li:nth-child(3) { background-image: url("../assets/img/accord.png"); }
+
+.accordion ul li:nth-child(4) { background-image: url("../assets/img/accord.png"); }
+
+.accordion ul li:nth-child(5) { background-image: url("../assets/img/accord.png"); }
+
+.accordion ul li:nth-child(6) { background-image: url("../assets/img/accord.png"); }
+
+
+
+
+
+
+.accordion ul:hover li { width: 8%; }
+
+.accordion ul:hover li:hover { width: 60%; }
+
+//aqui mudas a cor
+.accordion ul:hover li:hover a { background: rgba(218, 68, 60, 0.8); }
+
+.accordion ul:hover li:hover a * {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
 }
 
 
-.fsbanner > div { 
-	position:absolute; 
-	background-size:cover;
-	cursor:pointer;
-	top:0px; 
-	left:0px;
+
+
+
+@media screen and (max-width: 600px) {
+
+	.accordion { height: auto; }
 	
-	
-	&:hover {
-		&::after {
-			content: "";
-			background: $c-secondary;
-			width: 100%;
-			height: 50%;
-			position: absolute;
-			left: 0;
-			opacity: 0.7;
-			bottom: 0;
-		}
+	.accordion ul li,
+	.accordion ul li:hover,
+	.accordion ul:hover li,
+	.accordion ul:hover li:hover {
+	  position: relative;
+	  display: table;
+	  table-layout: fixed;
+	  width: 100%;
+	  -webkit-transition: none;
+	  transition: none;
 	}
 	
-}
+	}
 
-.fsbanner > div .name { 
-	display:none;
-	position:absolute; 
-	left:10px; 
-    bottom:10px;
-    max-width: 200px;
-    @include display4;
-    color: $c-pure;
-	font-weight: 700;
-	z-index: 3;
-
-    p {
-        @include mobileBody;
-        font-weight: 100;
-    }
-    
-    &:hover{
-        display: block;
-    }
-}
-
-.fsbanner > div .name.minimized {
-	opacity: 0;
-	transform: rotate(-90deg);
-	transform-origin: left top 0;
-	
-	bottom: -13px;
-    left: 7px;
-}
-
-//aqui é onde se esconde a secção
-.accordion {
-	display: none;
-
-	@media screen and (min-width:800px){
-		display: block;
-	  }
-}
+	.inactiveLink {
+		pointer-events: none;
+		cursor: default;
+	 }
