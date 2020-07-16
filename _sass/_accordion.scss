@@ -1,9 +1,16 @@
 .accordion {
+	display: none;
+
+	@media screen and (min-width: 800px) {
+				
+	display: block;
 	width: 100%;
 	max-width: 1080px;
 	height: 500px;
 	overflow: hidden;
 	margin: 50px auto;
+	}
+
   }
   
   .accordion ul {
@@ -23,6 +30,7 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 	transition: all 500ms ease;
+	background-size: cover;
   }
   
   .accordion ul li div {
@@ -84,18 +92,9 @@
 
 
 
-  .accordion ul li:nth-child(1) { background-image: url("../assets/img/accord.png"); }
+  .accordion ul li:nth-child(1) { background-image: url("../assets/img/accord1.jpg"); }
 
-.accordion ul li:nth-child(2) { background-image: url("../assets/img/accord.png"); }
-
-.accordion ul li:nth-child(3) { background-image: url("../assets/img/accord.png"); }
-
-.accordion ul li:nth-child(4) { background-image: url("../assets/img/accord.png"); }
-
-.accordion ul li:nth-child(5) { background-image: url("../assets/img/accord.png"); }
-
-.accordion ul li:nth-child(6) { background-image: url("../assets/img/accord.png"); }
-
+.accordion ul li:nth-child(2) { background-image: url("../assets/img/accord2.jpg"); }
 
 
 

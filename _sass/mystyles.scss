@@ -128,7 +128,7 @@ section {
     display: none;
     position: absolute;
     top: 0;
-    left: 124px;
+    left: 14%;
     width: 200px;
     height: 300px;
     background-color: $c-secondary;
@@ -145,7 +145,7 @@ section {
     width: 200px;
     position: absolute;
     z-index: 1;
-    left: 124px;
+    left: 14%;
     background: blue;
 
     @media screen and (min-width:800px){
@@ -185,9 +185,14 @@ section {
       li {
 
         svg {
-          height: 42px;
-          width: 42px;
+          height: 32px;
+          width: 32px;
         }
+
+        @media screen and (min-width: 800px) {
+          padding-left: $space-m;
+        }
+
       }
 
       @media screen and (min-width: 800px) {
@@ -213,8 +218,10 @@ section {
       padding-bottom: $space-s;
 
       @media screen and (min-width: 800px) {
-        width: 470px;
+        width: 512px;
         padding-top: $space-xl;
+        font-size: 84px;
+        line-height: 92px;
       }
     }
 
@@ -225,7 +232,7 @@ section {
     }
 
     @media screen and (min-width: 800px) {
-      padding-left: 200px;
+      padding-left: 20%;
       padding-bottom: 400px;
     }
 
@@ -259,7 +266,7 @@ section {
 }
 
 .gallery-section {
-  max-width: 900px;
+  max-width: 1112px;
   margin: 0 auto;
   
   h2 {
@@ -268,6 +275,10 @@ section {
 
   .text-notwhite {
     padding-bottom: $space-ml;
+
+    @media screen and (min-width: 800px) {
+      width: 335px;
+    }
   }
 
   .wrap-figures {
@@ -290,7 +301,7 @@ section {
 
   figure {
     position: relative;
-    max-width: 100%;
+    width: 100%;
     //overlay
     &::after {
       content: "";
@@ -304,7 +315,8 @@ section {
     }
     img {
       height: 460px;
-      width: auto;
+      min-width: 100%;
+      object-fit: cover;
     }
     figcaption {
       width:100%;
@@ -324,24 +336,33 @@ section {
     }
   }
 
+  @media screen and (min-width: 800px){
+    padding-bottom: $space-xl;
+  }
+
 }
 
 .serv-section {
   position: relative;
-  height: 1380px;
+  height: 1450px;
   padding: 0;
+
+  
 
   .serv-section-intro {
     padding-left: $space-s;
 
+    h2 {
+      padding-bottom: $space-s;
+    }
 
-  h2 {
-    padding-bottom: $space-s;
-  }
+    .text-notwhite {
+      padding-bottom: $space-ml;
+    }
 
-  .text-notwhite {
-    padding-bottom: $space-ml;
-  }
+    @media screen and (min-width: 800px){
+      padding-left: 10%;
+    }
 
   }
 
@@ -350,63 +371,100 @@ section {
 
     display: none;
 
-    @media screen and (min-width: 800px) {
+    @media screen and (min-width: 900px) {
     position: relative;
-      z-index: 2;
-      display: block;
-    height: 600px;
-    width: 346px;
+    z-index: 2;
+    display: block;
+    height: 800px;
+    width: 600px;
+    }
+
+    .car {
+    position: absolute;
+    height: 100%;
+    width: 100%;
     background-image: url('img/car.png');
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     }
     
   }
 
   .list-bg-grey {
 
+    ul {
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width:900px) {
+      display: block;
+      
+    }
+
+
+    }
+    
+
     .um {
-      background-image: url('img/itemsgrid/11.png');
+      background-image: url('img/itemsgrid/11.svg');
       background-size: cover;
-      width: 264px;
-      height: 129px;
+      width: 275px;
+      height: 157px;
     }
 
     .dois {
-      background-image: url('img/itemsgrid/22.png');
+      background-image: url('img/itemsgrid/22.svg');
       background-size: cover;
-      width: 278px;
-      height: 127px;
+      width: 275px;
+      height: 157px;
     }
 
     .tres {
-      background-image: url('img/itemsgrid/33.png');
+      background-image: url('img/itemsgrid/33.svg');
       background-size: cover;
-      width: 273px;
+      width: 275px;
       height: 157px;
     }
+
   }
 
   .list-bg-red {
+
+    ul {
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width:900px) {
+      display: block;
+      
+    }
+
+    }
+
     .quatro {
-      background-image: url('img/itemsgrid/44.png');
+      background-image: url('img/itemsgrid/44.svg');
       background-size: cover;
-      width: 264px;
-      height: 139px;
+      width: 275px;
+      height: 157px;
     }
 
     .cinco {
-      background-image: url('img/itemsgrid/55.png');
+      background-image: url('img/itemsgrid/55.svg');
       background-size: cover;
-      width: 278px;
-      height: 115px;
+      width: 275px;
+      height: 157px;
     }
 
     .seis {
-      background-image: url('img/itemsgrid/66.png');
+      background-image: url('img/itemsgrid/66.svg');
       background-size: cover;
-      width: 282px;
-      height: 136px;
+      width: 275px;
+      height: 157px;
     }
+
   }
 
   .servicos {
@@ -418,33 +476,76 @@ section {
   .bg-red {
     display: none;
 
-    @media screen and (min-width: 800px){
+    @media screen and (min-width: 900px){
       display: block;
+      background-color: #E24139;
+      height: 672px;
     }
 
-    background-color: lime;
-    height: 230px;
+    @media screen and (min-width: 1170px){
+      height: 460px;
+    }
+
+    @media screen and (min-width: 1450px){
+      height: 248px;
+    }
+
+    
   }
 
   .list-bg-grey {
-    background-color: $c-neutral2;
+    background-color: #F6F6F6;
     padding-left: $space-s;
     margin: 0;
 
     ul{
       margin: 0;
+      @media screen and (min-width:1170px){
+        padding-top: 64px;
+      }
     }
   }
 
   .list-bg-red {
-    background-color: $c-secondary;
+    background-color: #E24139;
     position: absolute;
     padding-left: $space-s;
     width: 100%;
     margin: 0;
   }
 
-  @media screen and (min-width: 800px){
+  @media screen and (min-width: 900px){
+    display: grid;
+
+    .serv-section-intro {
+      grid-area: intro;
+    }
+
+    .car-wrap {
+      grid-area: car;
+    }
+
+    .bg-red {
+      grid-area: bg-red;
+    }
+
+    .list-bg-grey {
+      grid-area: listg;
+    }
+
+    .list-bg-red {
+      grid-area: listr;
+    }
+    
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 160px 700px 700px;
+    grid-template-areas:
+      "intro intro"
+      "car listg"
+      "bg-red listr";
+  }
+
+  @media screen and (min-width: 1450px){
     display: grid;
 
     .serv-section-intro {
@@ -475,6 +576,11 @@ section {
       "bg-red listr";
   }
 
+  @media screen and (min-width:900px){
+    height: auto;
+    
+  }
+
 }
 
 
@@ -482,19 +588,90 @@ section {
   padding: $space-s;
 
   div {
+    margin: -16px;
     width: 100%;
-    height: 100%;
+    height: 300px;
+
+    @media screen and (min-width:1050px){
+      position: absolute;
+      height: 100%;
+      width: 90%;
+
+    }
+
+  .imga {
+    background-image: url('img/fotoentrada.png');
+    background-size: cover;
+  }  
+
   }
+
+  @media screen and (min-width:800px){
+    padding-bottom: $space-xl;
+    
+  }
+
+  @media screen and (min-width:1050px){
+    padding-top: 100px;
+    position: relative;
+    height: 800px;
+    
+  }
+
+  @media screen and (min-width:1450px){
+    padding-top: 300px;
+    position: relative;
+    height: 800px;
+    
+  }
+
 }
 
 .team-section {
 
+  .intro-wrap {
+
+    @media screen and (min-width:800px){
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding-right: 20%;
+      
+    }
+    
+  }
+
   h2 {
+    padding-top: $space-m;
     padding-bottom: $space-s;
+
+    @media screen and (min-width:800px){
+      max-width: 400px;
+      
+    }
+
+    @media screen and (min-width:1050px){
+      
+      padding-top:100px;
+        
+      }
+
+    @media screen and (min-width:1450px){
+      
+    padding-top:358px;
+      
+    }
+
   }
 
   .text-notwhite {
     padding-bottom: $space-ml;
+
+    @media screen and (min-width:800px){
+      max-width: 400px;
+      padding-bottom: $space-xl;
+      
+    }
   }
 
   ul {
@@ -509,9 +686,33 @@ section {
         height: 220px;
         border-radius: 50%;
         margin: auto;
+       
       }
+
+      .noe {
+        background-image: url("img/noe.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .filipe {
+        background-image: url("img/filipe.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .ricardo {
+        background-image: url("img/ricardo.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
       h3 {
+        padding-top: $space-m;
         color: $c-primary;
+        padding-bottom: $space-xs;
+        font-size: 28px;
       }
       p {
         color: $c-secondary;
@@ -520,6 +721,7 @@ section {
   @media screen and (min-width: 800px) {
     flex-direction: row;
     justify-content: space-evenly;
+    padding-bottom: $space-xxl;
   }
   }
 }
@@ -527,6 +729,10 @@ section {
 .brands {
   h2 {
     text-align: center;
+    @media screen and (min-width: 800px) {
+      padding-bottom: $space-m;
+      font-size: 46px;
+    }
   }
   div {
     display: flex;
@@ -539,6 +745,7 @@ section {
   @media screen and (min-width: 1000px) {
     flex-direction: row;
     justify-content: space-evenly;
+    padding-bottom: $space-xxl;
   }
 
   }
@@ -552,6 +759,10 @@ footer {
   .f-intro-wrap {
     position: relative;
     z-index: 2;
+
+    @media screen and (min-width: 800px) {
+      padding-left: $space-xl;
+    }
   }
 
   h3 {
@@ -605,6 +816,7 @@ footer {
       @media screen and (min-width: 800px) {
         width: 100%;
         height: 450px;
+        padding-left: $space-xl;
       }
     }
   }
@@ -630,9 +842,15 @@ footer {
     li {
       padding-bottom: $space-m;
 
+      .fut-linkedin {
+        @media screen and (min-width:800px){
+          padding-left: $space-m;
+        }
+      }
+
       svg {
-        height: 42px;
-        width: 42px;
+        height: 32px;
+        width: 32px;
       }
     }
   }
@@ -672,10 +890,10 @@ footer {
     @media screen and (min-width: 800px) {
       display: block;
       background-color: $c-secondary;
-    height: 700px;
+    height: 800px;
     width: 200px;
     left: 30%;
-    transform: translate(10%, 20%);
+    transform: translate(10%, 6.5%);
     z-index: 1;
     position: absolute;
     }
