@@ -54,9 +54,12 @@ img {
   display: block;
 }
 
-a:link {
+a:link, a:active, a:visited {
   text-decoration: none;
+  color: $c-third;
 }
+
+
 
 /*-TYPOGRAPHY*/
 
@@ -72,7 +75,11 @@ a:link {
 }
 
 .title2 {
-  @include display4; 
+  @include display4;
+  @media screen and (min-width: 800px) {
+    font-size: 48px;
+    line-height: 58px;
+  } 
 }
 
 .title3 {
@@ -98,9 +105,9 @@ section {
   .red-paint-mobile {
     position: absolute;
     top: 0;
-    right: 32px;
-    width: 144px;
-    height: 300px;
+    right: 38px;
+    width: 135px;
+    height: 420px;
     background-color: $c-secondary;
     z-index: 0;
 
@@ -112,16 +119,26 @@ section {
     
     .img-container-mobile {
     height: 200px;
-    width: 200px;
+    width: 260px;
     position: absolute;
     z-index: 0;
     top: 340px;
     right: 0;
-    background: blue;
+    overflow: hidden;
+
+      div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform: translate(55px, 10px);
+        background-size: cover;
+        background-image: url('img/paint.png');
+      }
 
     @media screen and (min-width:800px){
       display: none;
     }
+
     }
 
   .red-paint {
@@ -141,8 +158,8 @@ section {
 
   .img-container {
     display: none;
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 400px;
     position: absolute;
     z-index: 1;
     left: 14%;
@@ -150,7 +167,18 @@ section {
 
     @media screen and (min-width:800px){
       display: block;
+
+    div {
+      position: absolute;
+      width: 100%;
+      height: 120%;
+      transform: translate(-50px, 10px);
+      background-size: cover;
+      background-image: url('img/paint.png');
     }
+    
+    }
+
 
   }
 
@@ -233,7 +261,7 @@ section {
 
     @media screen and (min-width: 800px) {
       padding-left: 20%;
-      padding-bottom: 400px;
+      padding-bottom: 610px;
     }
 
   }
@@ -254,6 +282,7 @@ section {
 
       @media screen and (min-width: 800px) {
         max-width: 500px;
+        padding-bottom: $space-xxl;
       }
     }
 
@@ -357,6 +386,7 @@ section {
     }
 
     .text-notwhite {
+      max-width: 330px;
       padding-bottom: $space-ml;
     }
 
@@ -382,7 +412,7 @@ section {
     .car {
     position: absolute;
     height: 100%;
-    width: 100%;
+    width: 95%;
     background-image: url('img/car.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -635,7 +665,7 @@ section {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      padding-right: 20%;
+      padding-right: 22%;
       
     }
     
@@ -646,7 +676,7 @@ section {
     padding-bottom: $space-s;
 
     @media screen and (min-width:800px){
-      max-width: 400px;
+      width: 520px;
       
     }
 
@@ -668,8 +698,8 @@ section {
     padding-bottom: $space-ml;
 
     @media screen and (min-width:800px){
-      max-width: 400px;
-      padding-bottom: $space-xl;
+      width: 520px;
+      padding-bottom: $space-xxl;
       
     }
   }
@@ -727,6 +757,7 @@ section {
 }
 
 .brands {
+  overflow: hidden;
   h2 {
     text-align: center;
     @media screen and (min-width: 800px) {
@@ -737,6 +768,20 @@ section {
   div {
     display: flex;
     flex-direction: column;
+
+    @media screen and (min-width: 1000px) {
+      div {
+      height: 280px;
+      width: 100%;
+      border-radius: 20px;
+      right: -40px;
+      background: #E5E5E5;
+      position: absolute;
+      z-index: -2;
+    }
+
+    }
+    
     img {
       width: 240px;
       margin: auto;
@@ -824,6 +869,19 @@ footer {
   .directions {
     position: relative;
     z-index: 2;
+
+    @media screen and (min-width:800px) {
+      padding-left: $space-xl;
+      max-width: 300px;
+    }
+
+    @media screen and (min-width:1200px) {
+      padding-left: 150px;
+      max-width: 420px;
+    }
+
+    
+
   }
 
   .fut {
@@ -837,10 +895,12 @@ footer {
       flex-direction: row;
       width: 100%;
       justify-content: space-around;
+      padding-top: $space-m;
     }
 
     li {
       padding-bottom: $space-m;
+      color: $c-third;
 
       .fut-linkedin {
         @media screen and (min-width:800px){
@@ -890,7 +950,7 @@ footer {
     @media screen and (min-width: 800px) {
       display: block;
       background-color: $c-secondary;
-    height: 800px;
+    height: 822px;
     width: 200px;
     left: 30%;
     transform: translate(10%, 6.5%);
