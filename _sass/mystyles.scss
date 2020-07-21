@@ -41,6 +41,11 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   color: $c-pure;
+
+  @media screen and (min-width:800px) {
+    font-weight: 100;
+    
+  }
 }
 
 ul[class],
@@ -87,7 +92,7 @@ a:link, a:active, a:visited {
 }
 
 .text-notwhite {
-  color: $c-neutral;
+  color: #828282;
 }
 
 /* SECTIONS */
@@ -213,8 +218,8 @@ section {
       li {
 
         svg {
-          height: 32px;
-          width: 32px;
+          height: 24px;
+          width: 24px;
         }
 
         @media screen and (min-width: 800px) {
@@ -246,10 +251,16 @@ section {
       padding-bottom: $space-s;
 
       @media screen and (min-width: 800px) {
-        width: 512px;
+        width: 632px;
         padding-top: $space-xl;
         font-size: 84px;
         line-height: 92px;
+      }
+
+      @media screen and (min-width: 1250px) {
+        width: 682px;
+        font-size: 90px;
+        line-height: 105px;
       }
     }
 
@@ -295,18 +306,24 @@ section {
 }
 
 .gallery-section {
-  max-width: 1112px;
   margin: 0 auto;
   
   h2 {
     padding-bottom: $space-s;
+
+    @media screen and (min-width: 800px) {
+      padding-left: 10%;
+    }
+
   }
 
   .text-notwhite {
     padding-bottom: $space-ml;
 
     @media screen and (min-width: 800px) {
-      width: 335px;
+      width: 565px;
+
+      padding-left: 10%;
     }
   }
 
@@ -410,13 +427,27 @@ section {
     }
 
     .car {
-    position: absolute;
-    height: 100%;
-    width: 95%;
-    background-image: url('img/car.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+
+      @media screen and (min-width:800px) {
+        position: absolute;
+        height: 140%;
+        width: 101%;
+        background-image: url(img/car.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      @media screen and (min-width:1050px){
+        height: 150%;
+        width: 112%;
+      }
+
+      @media screen and (min-width:1450px){
+        height: 100%;
+        width: 95%;
+      }
+  
     }
     
   }
@@ -588,18 +619,33 @@ section {
 
     .bg-red {
       grid-area: bg-red;
+      height: 400px;
     }
 
     .list-bg-grey {
       grid-area: listg;
+      display: flex;
+      justify-content: space-around;
+      ul{
+        display: flex;
+        flex-direction: row;
+      }
     }
 
     .list-bg-red {
       grid-area: listr;
+      display: flex;
+      justify-content: space-around;
+      ul{
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        height: 400px;
+      }
     }
     
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 160px 300px 300px;
+    grid-template-rows: 160px 400px 400px;
     grid-template-areas:
       "intro intro"
       "car listg"
@@ -711,28 +757,31 @@ section {
       text-align: center;
       padding-bottom: $space-l;
       div {
-        background: red;
-        width: 220px;
-        height: 220px;
-        border-radius: 50%;
+        width: 289px;
+        height: 427px;
         margin: auto;
        
+        @media screen and (min-width: 800px) {
+          width: 329px;
+          height: 467px;
+          margin: auto;
+        }
       }
 
       .noe {
-        background-image: url("img/noe.jpg");
+        background-image: url("img/noe.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
       }
       .filipe {
-        background-image: url("img/filipe.jpg");
+        background-image: url("img/filipe.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
       }
       .ricardo {
-        background-image: url("img/ricardo.jpg");
+        background-image: url("img/ricardo.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -746,12 +795,19 @@ section {
       }
       p {
         color: $c-secondary;
+        padding-bottom: $space-s;
+      }
+      a {
+        width: 24px;
+        height: 24px;
+        display: block;
+        margin: 0 auto;
       }
     }
   @media screen and (min-width: 800px) {
     flex-direction: row;
     justify-content: space-evenly;
-    padding-bottom: $space-xxl;
+    padding-bottom: 224px;
   }
   }
 }
@@ -761,7 +817,7 @@ section {
   h2 {
     text-align: center;
     @media screen and (min-width: 800px) {
-      padding-bottom: $space-m;
+      padding-bottom: $space-xl;
       font-size: 46px;
     }
   }
@@ -770,10 +826,10 @@ section {
     flex-direction: column;
 
     @media screen and (min-width: 1000px) {
-      div {
+      .bg {
       height: 280px;
       width: 100%;
-      border-radius: 20px;
+      border-radius: 8px;
       right: -40px;
       background: #E5E5E5;
       position: absolute;
@@ -898,6 +954,15 @@ footer {
       padding-top: $space-m;
     }
 
+    @media screen and (min-width:1200px){
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+      padding-top: $space-m;
+      padding-left: 150px;
+      padding-right: 150px;
+    }
+
     li {
       padding-bottom: $space-m;
       color: $c-third;
@@ -909,8 +974,8 @@ footer {
       }
 
       svg {
-        height: 32px;
-        width: 32px;
+        height: 24px;
+        width: 24px;
       }
     }
   }
@@ -949,8 +1014,9 @@ footer {
     display: none;
     @media screen and (min-width: 800px) {
       display: block;
+      border-radius: 8px;
       background-color: $c-secondary;
-    height: 822px;
+    height: 814px;
     width: 200px;
     left: 30%;
     transform: translate(10%, 6.5%);
