@@ -1,0 +1,79 @@
+.photo-section {
+    padding: $space-s;
+  
+    .wrap {
+      position: relative;
+      @media screen and (min-width:1050px){
+        position: absolute;
+      }
+    }
+  
+    div {
+      margin: -16px;
+      width: 100%;
+      height: 300px;
+  
+      @media screen and (min-width:700px){
+        height: 600px;
+      }
+  
+      @media screen and (min-width:1050px){
+        position: absolute;
+        height: 100%;
+        width: 90%;
+      }
+  
+    .imga {
+      background-image: url('img/asset_gallery_02.png');
+      background-size: cover;
+    }
+  
+    .imgadois {
+      background-image: url('img/asset_gallery_01.png');
+      background-size: cover;
+      animation-name: fade;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-duration: 3s;
+      animation-direction: alternate;
+    }
+  
+    .imgs {
+      position: absolute;
+      top:0;
+      -webkit-transition: opacity 1s ease-in-out;
+      -moz-transition: opacity 1s ease-in-out;
+      -o-transition: opacity 1s ease-in-out;
+      transition: opacity 1s ease-in-out;
+    }
+  
+    @-webkit-keyframes fade {
+      0% {opacity: 1;}
+      45% {opacity: 1;}
+      50% {opacity: 0;}
+      100% {opacity: 0;}
+  }
+  @keyframes fade {
+      0% {opacity: 1;}
+      45% {opacity: 1;}
+      50% {opacity: 0;}
+      100% {opacity: 0;}
+  }
+  
+    }
+
+    @media screen and (min-width:800px){
+        padding-bottom: $space-xl;  
+      }
+    
+      @media screen and (min-width:1050px){
+        padding-top: 100px;
+      }
+    
+      @media screen and (min-width:1450px){
+        padding-top: 300px;
+      }
+  
+    
+  
+  }

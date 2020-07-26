@@ -66,6 +66,7 @@ a:link, a:active, a:visited {
 
 
 
+
 /*-TYPOGRAPHY*/
 
 .title1 {
@@ -123,7 +124,7 @@ section {
     }
     
     .img-container-mobile {
-    height: 200px;
+    height: 230px;
     width: 260px;
     position: absolute;
     z-index: 0;
@@ -168,7 +169,6 @@ section {
     position: absolute;
     z-index: 1;
     left: 14%;
-    background: blue;
 
     @media screen and (min-width:800px){
       display: block;
@@ -220,6 +220,13 @@ section {
         svg {
           height: 24px;
           width: 24px;
+          #Square {
+            fill: $c-third;
+  
+            &:hover {
+              fill:$c-secondary;
+            }
+          }
         }
 
         @media screen and (min-width: 800px) {
@@ -307,12 +314,23 @@ section {
 
 .gallery-section {
   margin: 0 auto;
+
+  .gallery-intro {
+    position: relative;
+  }
   
   h2 {
     padding-bottom: $space-s;
 
     @media screen and (min-width: 800px) {
       padding-left: 10%;
+    }
+
+  }
+
+  .accord-h2 {
+    @media screen and (min-width: 800px) {
+      padding-left: 0;
     }
 
   }
@@ -356,7 +374,7 @@ section {
       height: 220px;
       position: absolute;
       left: 0;
-      opacity: 0.7;
+      opacity: 0.8;
       bottom: 0;
     }
     img {
@@ -397,6 +415,8 @@ section {
 
   .serv-section-intro {
     padding-left: $space-s;
+    position: relative;
+    opacity: 0;
 
     h2 {
       padding-bottom: $space-s;
@@ -541,6 +561,7 @@ section {
       display: block;
       background-color: #E24139;
       height: 672px;
+      width: 101%;
     }
 
     @media screen and (min-width: 1170px){
@@ -662,23 +683,69 @@ section {
 
 .photo-section {
   padding: $space-s;
+  padding-top: 24px;
+
+  .wrap {
+    position: relative;
+    @media screen and (min-width:1050px){
+      position: absolute;
+    }
+  }
 
   div {
     margin: -16px;
-    width: 100%;
+    width: 100vw;
     height: 300px;
+
+    @media screen and (min-width:700px){
+      width: 100%;
+      height: 600px;
+    }
 
     @media screen and (min-width:1050px){
       position: absolute;
       height: 100%;
       width: 90%;
-
     }
 
   .imga {
-    background-image: url('img/fotoentrada.png');
+    background-image: url('img/asset_gallery_02.png');
+    background-position: center;
     background-size: cover;
-  }  
+  }
+
+  .imgadois {
+    background-image: url('img/asset_gallery_01.png');
+    background-size: cover;
+    background-position: 50% 100%;
+    animation-name: fade;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-direction: alternate;
+  }
+
+  .imgs {
+    position: absolute;
+    top:0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+  }
+
+  @-webkit-keyframes fade {
+    0% {opacity: 1;}
+    45% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 0;}
+}
+@keyframes fade {
+    0% {opacity: 1;}
+    45% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 0;}
+}
 
   }
 
@@ -690,7 +757,7 @@ section {
   @media screen and (min-width:1050px){
     padding-top: 100px;
     position: relative;
-    height: 800px;
+    height: 700px;
     
   }
 
@@ -706,6 +773,7 @@ section {
 .team-section {
 
   .intro-wrap {
+    position: relative;
 
     @media screen and (min-width:800px){
       display: flex;
@@ -754,6 +822,7 @@ section {
     display: flex;
     flex-direction: column;
     li {
+      position: relative;
       text-align: center;
       padding-bottom: $space-l;
       div {
@@ -766,6 +835,18 @@ section {
           height: 467px;
           margin: auto;
         }
+      }
+      .photos-workers {
+
+        @media screen and (min-width: 800px) {
+          max-width: 270px;
+        }
+
+        @media screen and (min-width: 1000px) {
+          max-width: 100%;
+        }
+        
+
       }
 
       .noe {
@@ -802,12 +883,26 @@ section {
         height: 24px;
         display: block;
         margin: 0 auto;
+
+        svg {
+          height: 24px;
+          width: 24px;
+          fill: #0077B7;
+  
+            &:hover {
+              fill:$c-secondary !important;
+            }
+          
+        }
+
       }
+
+      
     }
   @media screen and (min-width: 800px) {
     flex-direction: row;
     justify-content: space-evenly;
-    padding-bottom: 224px;
+    padding-bottom: 165px;
   }
   }
 }
@@ -825,12 +920,12 @@ section {
     display: flex;
     flex-direction: column;
 
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: 1200px) {
       .bg {
       height: 280px;
-      width: 100%;
-      border-radius: 8px;
-      right: -40px;
+      width: 90%;
+      border-radius: 8px 0 0 8px;
+      right: 0;
       background: #E5E5E5;
       position: absolute;
       z-index: -2;
@@ -916,8 +1011,9 @@ footer {
 
       @media screen and (min-width: 800px) {
         width: 100%;
-        height: 450px;
-        padding-left: $space-xl;
+        height: 500px;
+        position: relative;
+        right: -16px;
       }
     }
   }
@@ -925,6 +1021,10 @@ footer {
   .directions {
     position: relative;
     z-index: 2;
+
+    .semib {
+      font-weight: 400;
+    }
 
     @media screen and (min-width:800px) {
       padding-left: $space-xl;
@@ -946,6 +1046,7 @@ footer {
     align-items: center;
     position: relative;
     z-index: 2;
+    font-size: 15px;
     
     @media screen and (min-width:800px){
       flex-direction: row;
@@ -968,6 +1069,7 @@ footer {
       color: $c-third;
 
       .fut-linkedin {
+        padding-left: 24px;
         @media screen and (min-width:800px){
           padding-left: $space-m;
         }
@@ -976,6 +1078,13 @@ footer {
       svg {
         height: 24px;
         width: 24px;
+        #Square {
+          fill: $c-third;
+
+          &:hover {
+            fill:$c-secondary;
+          }
+        }
       }
     }
   }
@@ -1002,7 +1111,7 @@ footer {
     
     grid-template-columns: 1fr 2fr;
     grid-column-gap: $space-s;
-    grid-template-rows: auto 500px auto;
+    grid-template-rows: auto 700px auto;
     grid-template-areas:
       ". intro"
       "three map"
@@ -1014,16 +1123,15 @@ footer {
     display: none;
     @media screen and (min-width: 800px) {
       display: block;
-      border-radius: 8px;
+      border-radius: 8px 8px 0 0;
       background-color: $c-secondary;
-    height: 814px;
+    height: 951px;
     width: 200px;
     left: 30%;
     transform: translate(10%, 6.5%);
     z-index: 1;
     position: absolute;
-    }
-      
+    }   
     
   }
 }
