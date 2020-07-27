@@ -19,7 +19,7 @@ tl.fromTo(brush, 2, {top: "0px"}, {top:"500px"},)
 var controllerdois = new ScrollMagic.Controller();
 var tldois = new TimelineMax();
 
-tldois.fromTo(brush, 2, {top: "500px"}, {top:"1000px"},)
+tldois.fromTo(brush, 2, {top: "500px"}, {top:"1062px"},)
 .fromTo(paint, 2, {height: "600px"}, {height:"1200px"}, "-=2");
 
 var scene = new ScrollMagic.Scene({

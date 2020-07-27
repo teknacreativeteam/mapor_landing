@@ -194,6 +194,9 @@ section {
     nav {
       display: flex;
     
+      .anchorc:hover {
+        color: $c-secondary;
+      }
 
     img {
       padding-bottom: $space-xl;
@@ -712,6 +715,46 @@ section {
     background-image: url('img/asset_gallery_02.png');
     background-position: center;
     background-size: cover;
+
+
+    i {
+      width: 48px;
+    height: 40px;
+    position: absolute;
+    z-index: 3;
+    top: 94%;
+    left: 50%;
+    animation-name: fadedois;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-direction: alternate;
+
+      .mcum {
+        display: inline-block;
+        height: 18px;
+        width: 18px;
+        position: absolute;
+        border-radius: 50%;
+        left: 0;
+        z-index: 8;
+        opacity: 1;
+
+        border: 2px solid white;
+        
+      }
+      .mcdois {
+        display: inline-block;
+        height: 18px;
+        width: 18px;
+        position: absolute;
+        right: 0;
+        border-radius: 50%;
+        z-index: 8;
+        opacity: 1;
+        background: white;
+      }
+    }
   }
 
   .imgadois {
@@ -721,8 +764,41 @@ section {
     animation-name: fade;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-direction: alternate;
+
+
+    i {
+      width: 48px;
+    height: 40px;
+    position: absolute;
+    z-index: 5;
+    top: 94%;
+    left: 50%;
+    opacity: 1;
+    
+
+      .mcum {
+        display: inline-block;
+        height: 18px;
+        width: 18px;
+        position: absolute;
+        border-radius: 50%;
+        left: 0;
+        z-index: 5;
+        background: white;
+      }
+      .mcdois {
+        display: inline-block;
+        height: 18px;
+        width: 18px;
+        position: absolute;
+        right: 0;
+        border-radius: 50%;
+        z-index: 5;
+        border: 2px solid white;
+      }
+    }
   }
 
   .imgs {
@@ -732,6 +808,7 @@ section {
     -moz-transition: opacity 1s ease-in-out;
     -o-transition: opacity 1s ease-in-out;
     transition: opacity 1s ease-in-out;
+
   }
 
   @-webkit-keyframes fade {
@@ -746,7 +823,12 @@ section {
     50% {opacity: 0;}
     100% {opacity: 0;}
 }
-
+@keyframes fadedois {
+  0% {opacity: 0;}
+  45% {opacity: 0;}
+  50% {opacity: 1;}
+  100% {opacity: 1;}
+}
   }
 
   @media screen and (min-width:800px){
