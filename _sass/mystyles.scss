@@ -203,6 +203,7 @@ section {
       padding-bottom: $space-xl;
       flex-grow: 3;
       max-width: 221px;
+      padding-top: 36px;
 
       @media screen and (min-width: 800px) {
         padding-top: $space-l;
@@ -261,7 +262,7 @@ section {
     h1 {
       padding-bottom: $space-s;
 
-      @media screen and (min-width: 800px) {
+      @media screen and (min-width: 762px) {
         width: 632px;
         padding-top: $space-xl;
         font-size: 84px;
@@ -276,7 +277,7 @@ section {
     }
 
     p {
-      @media screen and (min-width: 800px) {
+      @media screen and (min-width: 762px) {
         width: 420px;
       }
     }
@@ -290,6 +291,7 @@ section {
 
   .zone {
     margin-bottom: $space-xl;
+    padding-top: 228px;
 
     img {
       padding-bottom: $space-m;
@@ -302,14 +304,15 @@ section {
         padding-bottom: $space-s;
       }
 
-      @media screen and (min-width: 800px) {
+      @media screen and (min-width: 762px) {
         max-width: 500px;
         padding-bottom: $space-xxl;
       }
     }
 
-    @media screen and (min-width: 800px) {
+    @media screen and (min-width: 762px) {
       padding-left: 45%;
+      padding-top: 0px;
     }
 
   }
@@ -343,7 +346,7 @@ section {
     padding-bottom: $space-ml;
 
     @media screen and (min-width: 800px) {
-      width: 565px;
+      width: 455px;
 
       padding-left: 10%;
     }
@@ -404,6 +407,7 @@ section {
     }
   }
 
+  padding-bottom: 46px;
   @media screen and (min-width: 800px){
     padding-bottom: $space-xl;
   }
@@ -427,7 +431,8 @@ section {
     }
 
     .text-notwhite {
-      max-width: 330px;
+      max-width: 500px;
+      padding-right: 16px;
       padding-bottom: $space-ml;
     }
 
@@ -624,7 +629,7 @@ section {
     }
     
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 160px 700px 700px;
+    grid-template-rows: 184px 700px 700px;
     grid-template-areas:
       "intro intro"
       "car listg"
@@ -670,7 +675,7 @@ section {
     }
     
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 160px 400px 400px;
+    grid-template-rows: 200px 400px 400px;
     grid-template-areas:
       "intro intro"
       "car listg"
@@ -687,7 +692,7 @@ section {
 
 .photo-section {
   padding: $space-s;
-  padding-top: 24px;
+  padding-top: 144px;
 
   .wrap {
     position: relative;
@@ -719,17 +724,22 @@ section {
 
 
     i {
+
       width: 48px;
     height: 40px;
     position: absolute;
     z-index: 3;
-    top: 94%;
+    top: 90%;
     left: 50%;
     animation-name: fadedois;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-duration: 4s;
     animation-direction: alternate;
+
+    @media screen and(min-width:763px){
+      top: 94%;
+    }
 
       .mcum {
         display: inline-block;
@@ -774,9 +784,13 @@ section {
     height: 40px;
     position: absolute;
     z-index: 5;
-    top: 94%;
+    top: 90%;
     left: 50%;
     opacity: 1;
+
+    @media screen and(min-width:763px){
+      top: 94%;
+    }
     
 
       .mcum {
@@ -833,12 +847,14 @@ section {
   }
 
   @media screen and (min-width:800px){
+
+
+    padding-top: 84px;
     padding-bottom: $space-xl;
     
   }
 
   @media screen and (min-width:1050px){
-    padding-top: 100px;
     position: relative;
     height: 700px;
     
@@ -854,6 +870,8 @@ section {
 }
 
 .team-section {
+
+  padding-top: 24px;
 
   .intro-wrap {
     position: relative;

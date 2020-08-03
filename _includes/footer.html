@@ -6,20 +6,20 @@
     </p>
   </div>
 
-    <ul class="directions">
-      <li>
-        <h4>Morada</h4>
+    <ul class="directions" aria-label="lista mapor tintas e materias localização">
+      <li aria-label="mapor morada">
+        <h4 >Morada</h4>
         <p>Zona Industrial de Mira Polo II</br>
           Lote 5, Seixo de Mira
           3070-492</br>
           Mira, PORTUGAL</p>
       </li>
-      <li>
+      <li aria-label="mapor tintas horário horario">
         <h4>Horário</h4>
         <p>Segunda a Sexta</br>
           8h30 – 12h30 / 14h-18h</p>  
       </li>
-      <li>
+      <li aria-label="mapor tintas contactos">
         <h4>Contactos</h4>
         <p><span class="semib">Contactos gerais:</span></br>
           231 488 206</br>
@@ -33,23 +33,23 @@
       </li>
     </ul>
 
-    <div class="the-map">
+    <div class="the-map" aria-label="mapor localização mapa">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4123.5884365984175!2d-8.70553258722036!3d40.45902623249623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd23b1874b545ac7%3A0x38065fd700aa522f!2sMAPOR%20-%20Tintas%20e%20materiais!5e0!3m2!1sen!2sbe!4v1596465089531!5m2!1sen!2sbe" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
   
     <ul class="fut">
       <li>
-        <a href="https://www.facebook.com/maportintas/" target="_blank">{% include facebook.html %}</a>
-        <a href="https://www.linkedin.com/company/12993480" target="_blank" class="fut-linkedin">{% include linkedin.html %}</a>
+        <a href="https://www.facebook.com/maportintas/" target="_blank" title="facebook mapor">{% include facebook.html %}</a>
+        <a href="https://www.linkedin.com/company/12993480" target="_blank" class="fut-linkedin" title="linkedin mapor">{% include linkedin.html %}</a>
       </li>
       <li>Copyright © 2020 Mapor</li>
-      <li><a href="https://teknacreative.pt/" target="_blank">Developed by Tekna Creative</a></li>
+      <li><a href="https://teknacreative.pt/" target="_blank" title="mapor colaboração tekna teknacreative design">Developed by Tekna Creative</a></li>
     </ul>
 
 
     <div class="f-red-flag"></div>
 
-    {% include cookies.html %}
+    <!-- {% include cookies.html %} -->
 
     <!---->
  
@@ -62,7 +62,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 
     <script src="animation-intro.js"></script>
-    <script src="purecookie.js"></script>
+    
+    <!--<script src="purecookie.js"></script>-->
     
     
 
