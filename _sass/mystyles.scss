@@ -346,7 +346,7 @@ section {
     padding-bottom: $space-ml;
 
     @media screen and (min-width: 800px) {
-      width: 455px;
+      max-width: 466px;
 
       padding-left: 10%;
     }
