@@ -1264,10 +1264,12 @@ footer {
   padding-left: 16px;
 }
 
-.cc {
-  white-space: pre;
-}
-
-.ci {
-  white-space: pre;
+@-moz-document url-prefix() {
+  .cc {
+    white-space: pre;
+  }
+  
+  .ci {
+    white-space: pre;
+  }
 }
