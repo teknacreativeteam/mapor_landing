@@ -1036,8 +1036,17 @@ section {
     .logobtnwrap {
       display: flex;
 
+      &:last-of-type {
+        padding-bottom: 84px;
+      }
+
       @media screen and (min-width: 800px) {
         flex-direction: column;
+
+        &:last-of-type {
+          padding-bottom: inherit;
+        }
+
       }
      
     }
