@@ -1273,3 +1273,30 @@ footer {
     white-space: pre;
   }
 }
+
+///-- Politica privacidade
+.return-politica {
+  background-color: $c-primary;
+  display: flex;
+  padding: 24px;
+  div {
+    max-width: 184px;
+  }
+}
+
+.politica {
+  margin: 0 auto;
+  max-width: 800px;
+  padding-top: 56px;
+  padding-bottom: 56px;
+  h1, h2, p {
+    color: $c-primary;
+  }
+
+  h1, h2 {
+    padding-bottom: 8px;
+  }
+  p {
+    padding-bottom: 24px;
+  }
+}

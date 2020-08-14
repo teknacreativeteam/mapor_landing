@@ -1,4 +1,4 @@
-.cookieConsentContainer {
+/*.cookieConsentContainer {
 	z-index: 999;
 	width: 350px;
 	min-height: 20px;
@@ -56,4 +56,37 @@
 		left: 0px !important;
 		width: 100%  !important;
 	}
+}
+*/
+
+///novo
+
+/*
+CSS muss nach dem HTML-Code und dem JS-Aufruf eingefügt werden. Nur so wird der nachgeladene CSS-Code überschrieben.
+
+Color: Schriftfarbe
+Background: Hintergrundfarbe
+Hover/Focus: Veränderung bei Mauszeiger über dem Element
+*/
+
+/* Styles für "Mehr Informationen"-Link */
+.cc_container a,
+.cc_container a:visited {
+	color: #00afea;
+}
+.cc_container a:hover,
+.cc_container a:focus {
+	color: #51d3ff;
+}
+
+/* Styles für "Verstanden"-Button */
+.cc_container .cc_btn,
+.cc_container .cc_btn:visited {
+	color: #fff;
+	background-color: #00afea;
+}
+.cc_container .cc_btn:hover,
+.cc_container .cc_btn:focus {
+	color: #fff;
+	background: #51d3ff;
 }
